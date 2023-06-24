@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="compilerbutton.css">
+  </head>
+<body>
+    
+
+    <h1>Python - Data Types</h1>
+  
+    <p>Python Data Types are used to define the type of a variable. It defines what type of data we are going to store in a variable.  The data stored in memory can be of many types. For example, a person's age is stored as a numeric value and his or her address is stored as alphanumeric characters.</p>
+    <p>Python has various built-in data types which we will discuss with in this tutorial:</p>
+    <ul>
+    <li>Numeric - int, float, complex</li>
+    <li>String - str</li>
+    <li>Sequence - list, tuple, range</li>
+    <li>Binary - bytes, bytearray, memoryview</li>
+    <li>Mapping - dict</li>
+    <li>Boolean - bool</li>
+    <li>Set - set, frozenset</li>
+    <li>None - NoneType</li>
+    </ul>
+    <h2>Python Numeric Data Type</h2>
+    <p>Python numeric data types store numeric values. Number objects are created when you assign a value to them. For example &minus;</p>
+    <pre class="just-code notranslate language-python" data-lang="python3">
+    var1 = 1
+    var2 = 10
+    var3 = 10.023
+    </pre>
+    <p>Python supports four different numerical types &minus;</p>
+    <ul class="list">
+    <li>int (signed integers)</li>
+    <li>long (long integers, they can also be represented in octal and hexadecimal)</li>
+    <li>float (floating point real values)</li>
+    <li>complex (complex numbers)</li>
+    </ul>
+    <h3>Examples</h3>
+    <p>Here are some examples of numbers &minus;</p>
+    <table class="table table-bordered" style="text-align:center;">
+    <tr>
+    <th style="text-align:center;">int</th>
+    <th style="text-align:center;">long</th>
+    <th style="text-align:center;">float</th>
+    <th style="text-align:center;">complex</th>
+    </tr>
+    <tr>
+    <td>10</td>
+    <td>51924361L</td>
+    <td>0.0</td>
+    <td>3.14j</td>
+    </tr>
+    <tr>
+    <td>100</td>
+    <td>-0x19323L</td>
+    <td>15.20</td>
+    <td>45.j</td>
+    </tr>
+    <tr>
+    <td>-786</td>
+    <td>0122L</td>
+    <td>-21.9</td>
+    <td>9.322e-36j</td>
+    </tr>
+    <tr>
+    <td>080</td>
+    <td>0xDEFABCECBDAECBFBAEl</td>
+    <td>32.3+e18</td>
+    <td>.876j</td>
+    </tr>
+    <tr>
+    <td>-0490</td>
+    <td>535633629843L</td>
+    <td>-90.</td>
+    <td>-.6545+0J</td>
+    </tr>
+    <tr>
+    <td>-0x260</td>
+    <td>-052318172735L</td>
+    <td>-32.54e100</td>
+    <td>3e+26J</td>
+    </tr>
+    <tr>
+    <td>0x69</td>
+    <td>-4721885298529L</td>
+    <td>70.2-E12</td>
+    <td>4.53e-7j</td>
+    </tr>
+    </table>
+    <ul>
+    <li><p>Python allows you to use a lowercase l with long, but it is recommended that you use only an uppercase L to avoid confusion with the number 1. Python displays long integers with an uppercase L.</p></li>
+    <li><p>A complex number consists of an ordered pair of real floating-point numbers denoted by x + yj, where x and y are the real numbers and j is the imaginary unit.</p></li>
+    </ul>
+    <h3>Example</h3>
+    <p>Following is an example to show the usage of Integer, Float and Complex numbers:</p>
+    <pre class="demo-code notranslate language-python" data-lang="python3">
+    # integer variable.
+    a=100
+    print("The type of variable having value", a, " is ", type(a))
+    
+    # float variable.
+    b=20.345
+    print("The type of variable having value", b, " is ", type(b))
+    
+    # complex variable.
+    c=10+3j
+    print("The type of variable having value", c, " is ", type(c))
+    </pre>
+    <h2>Python String Data Type</h2>
+    <p>Python Strings are identified as a contiguous set of characters represented in the quotation marks. Python allows for either pairs of single or double quotes. Subsets of strings can be taken using the slice operator ([ ] and [:] ) with indexes starting at 0 in the beginning of the string and working their way from -1 at the end.</p>
+    <p>The plus (+) sign is the string concatenation operator and the asterisk (*) is the repetition operator in Python. For example &minus;</p>
+    <pre class="demo-code notranslate language-python" data-lang="python3">
+    str = 'Hello World!'
+    
+    print (str)          # Prints complete string
+    print (str[0])       # Prints first character of the string
+    print (str[2:5])     # Prints characters starting from 3rd to 5th
+    print (str[2:])      # Prints string starting from 3rd character
+    print (str * 2)      # Prints string two times
+    print (str + "TEST") # Prints concatenated string
+    </pre>
+    <p>This will produce the following result &minus;</p>
+    <pre class="result notranslate">
+    Hello World!
+    H
+    llo
+    llo World!
+    Hello World!Hello World!
+    Hello World!TEST
+    </pre>
+    <h2>Python List Data Type</h2>
+    <p>Python Lists are the most versatile compound data types. A Python list contains items separated by commas and enclosed within square brackets ([]). To some extent, Python lists are similar to arrays in C. One difference between them is that all the items belonging to a Python list can be of different data type where as C array can store elements related to a particular data type.</p>
+    <p>The values stored in a Python list can be accessed using the slice operator ([ ] and [:]) with indexes starting at 0 in the beginning of the list and working their way to end -1. The plus (+) sign is the list concatenation operator, and the asterisk (*) is the repetition operator. For example &minus;</p>
+    <pre class="demo-code notranslate language-python" data-lang="python3">
+    list = [ 'abcd', 786 , 2.23, 'john', 70.2 ]
+    tinylist = [123, 'john']
+    
+    print (list)            # Prints complete list
+    print (list[0])         # Prints first element of the list
+    print (list[1:3])       # Prints elements starting from 2nd till 3rd 
+    print (list[2:])        # Prints elements starting from 3rd element
+    print (tinylist * 2)    # Prints list two times
+    print (list + tinylist) # Prints concatenated lists
+    </pre>
+    <p>This produce the following result &minus;</p>
+    <pre class="result notranslate">
+    ['abcd', 786, 2.23, 'john', 70.2]
+    abcd
+    [786, 2.23]
+    [2.23, 'john', 70.2]
+    [123, 'john', 123, 'john']
+    ['abcd', 786, 2.23, 'john', 70.2, 123, 'john']
+    </pre>
+    <h2>Python Tuple Data Type</h2>
+    <p>Python tuple is another sequence data type that is similar to a list. A Python tuple consists of a number of values separated by commas. Unlike lists, however, tuples are enclosed within parentheses.</p>
+    <p>The main differences between lists and tuples are: Lists are enclosed in brackets ( [ ] ) and their elements and size can be changed, while tuples are enclosed in parentheses ( ( ) ) and cannot be updated. Tuples can be thought of as <b>read-only</b> lists. For example &minus;</p>
+    <pre class="demo-code notranslate language-python" data-lang="python3">
+    tuple = ( 'abcd', 786 , 2.23, 'john', 70.2  )
+    tinytuple = (123, 'john')
+    
+    print (tuple)               # Prints the complete tuple
+    print (tuple[0])            # Prints first element of the tuple
+    print (tuple[1:3])          # Prints elements of the tuple starting from 2nd till 3rd 
+    print (tuple[2:])           # Prints elements of the tuple starting from 3rd element
+    print (tinytuple * 2)       # Prints the contents of the tuple twice
+    print (tuple + tinytuple)   # Prints concatenated tuples
+    </pre>
+    <p>This produce the following result &minus;</p>
+    <pre class="result notranslate">
+    ('abcd', 786, 2.23, 'john', 70.2)
+    abcd
+    (786, 2.23)
+    (2.23, 'john', 70.2)
+    (123, 'john', 123, 'john')
+    ('abcd', 786, 2.23, 'john', 70.2, 123, 'john')
+    </pre>
+    <p>The following code is invalid with tuple, because we attempted to update a tuple, which is not allowed. Similar case is possible with lists &minus;</p>
+    <pre class="just-code notranslate language-python" data-lang="python3">
+    tuple = ( 'abcd', 786 , 2.23, 'john', 70.2  )
+    list = [ 'abcd', 786 , 2.23, 'john', 70.2  ]
+    tuple[2] = 1000    # Invalid syntax with tuple
+    list[2] = 1000     # Valid syntax with list
+    </pre>
+    <h2>Python Ranges</h2>
+    <p>Python <b>range()</b> is an in-built function in Python which returns a sequence of numbers starting from 0 and increments to 1 until it reaches a specified number.</p>
+    <p>We use <b>range()</b> function with for and while loop to generate a sequence of numbers. Following is the syntax of the function:</p>
+    
+    <pre class="just-code notranslate language-python" data-lang="python3">
+    range(start, stop, step)
+    </pre>
+    <p>Here is the description of the parameters used:</p>
+    <ul>
+    <li><b>start</b>: Integer number to specify starting position, (Its optional, Default: 0)</li>
+    <li><b>stop</b>: Integer number to specify starting position (It's mandatory)</li>
+    <li><b>step</b>: Integer number to specify increment, (Its optional, Default: 1)</li>
+    </ul>
+    
+    <h3>Examples</h3>
+    <p>Following is a program which uses for loop to print number from 0 to 4 &minus;</p>
+    <pre class="demo-code notranslate language-python" data-lang="python3">
+    for i in range(5):
+      print(i)
+    </pre>
+    <p>This produce the following result &minus;</p>
+    <pre class="result notranslate">
+    0
+    1
+    2
+    3
+    4
+    </pre>
+    <p>Now let's modify above program to print the number starting from 1 instead of 0:</p>
+    <pre class="demo-code notranslate language-python" data-lang="python3">
+    for i in range(1, 5):
+      print(i)
+    </pre>
+    <p>This produce the following result &minus;</p>
+    <pre class="result notranslate">
+    1
+    2
+    3
+    4
+    </pre>
+    <p>Again, let's modify the program to print the number starting from 1 but with an increment of 2 instead of 1:</p>
+    <pre class="demo-code notranslate language-python" data-lang="python3">
+    for i in range(1, 5, 2):
+      print(i)
+    </pre>
+    <p>This produce the following result &minus;</p>
+    <pre class="result notranslate">
+    1
+    3
+    </pre>
+    <h2>Python Dictionary</h2>
+    <p>Python dictionaries are kind of hash table type. They work like associative arrays or hashes found in Perl and consist of key-value pairs. A dictionary key can be almost any Python type, but are usually numbers or strings. Values, on the other hand, can be any arbitrary Python object.</p>
+    <p>Dictionaries are enclosed by curly braces ({ }) and values can be assigned and accessed using square braces ([]). For example &minus;</p>
+    <pre class="demo-code notranslate language-python" data-lang="python3">
+    dict = {}
+    dict['one'] = "This is one"
+    dict[2]     = "This is two"
+    
+    tinydict = {'name': 'john','code':6734, 'dept': 'sales'}
+    
+    
+    print (dict['one'])       # Prints value for 'one' key
+    print (dict[2])           # Prints value for 2 key
+    print (tinydict)          # Prints complete dictionary
+    print (tinydict.keys())   # Prints all the keys
+    print (tinydict.values()) # Prints all the values
+    </pre>
+    <p>This produce the following result &minus;</p>
+    <pre class="result notranslate">
+    This is one
+    This is two
+    {'dept': 'sales', 'code': 6734, 'name': 'john'}
+    ['dept', 'code', 'name']
+    ['sales', 6734, 'john']
+    </pre>
+    <p>Python dictionaries have no concept of order among elements. It is incorrect to say that the elements are "out of order"; they are simply unordered.</p>
+    <h2>Python Boolean Data Types</h2>
+    <p>Python <b>boolean</b> type is one of built-in data types which represents one of the two values either <b>True</b> or <b>False</b>. Python  <b>bool()</b> function allows you to evaluate the value of any expression and returns either True or False based on the expression.</p>
+    
+    <h3>Examples</h3>
+    <p>Following is a program which prints the value of boolean variables a and b &minus;</p>
+    <pre class="demo-code notranslate language-python" data-lang="python3">
+    a = True
+    # display the value of a
+    print(a)
+    
+    # display the data type of a
+    print(type(a))
+    </pre>
+    <p>This produce the following result &minus;</p>
+    <pre class="result notranslate">
+    true
+    &lt;class 'bool'&gt;
+    </pre>
+    <p>Following is another program which evaluates the expressions and prints the return values: </p>
+    <pre class="demo-code notranslate language-python" data-lang="python3">
+    # Returns false as a is not equal to b
+    a = 2
+    b = 4
+    print(bool(a==b))
+    
+    # Following also prints the same
+    print(a==b)
+    
+    # Returns False as a is None
+    a = None
+    print(bool(a))
+    
+    # Returns false as a is an empty sequence
+    a = ()
+    print(bool(a))
+    
+    # Returns false as a is 0
+    a = 0.0
+    print(bool(a))
+    
+    # Returns false as a is 10
+    a = 10
+    print(bool(a))
+    </pre>
+    <p>This produce the following result &minus;</p>
+    <pre class="result notranslate">
+    False
+    False
+    False
+    False
+    False
+    True
+    </pre>
+    <h2>Python Data Type Conversion</h2>
+    <p>Sometimes, you may need to perform conversions between the built-in data types. To convert data between different Python data types, you simply use the type name as a function.</p>
+    <h3>Conversion to int</h3>
+    <p>Following is an example to convert number, float and string into integer data type:</p>
+    <pre class="demo-code notranslate language-python" data-lang="python3">
+    a = int(1)     # a will be 1
+    b = int(2.2)   # b will be 2
+    c = int("3")   # c will be 3
+    
+    print (a)
+    print (b)
+    print (c)
+    </pre>
+    <p>This produce the following result &minus;</p>
+    <pre class="result notranslate">
+    1
+    2
+    3
+    </pre>
+    <h3>Conversion to float</h3>
+    <p>Following is an example to convert number, float and string into float data type:</p>
+    <pre class="demo-code notranslate language-python" data-lang="python3">
+    a = float(1)     # a will be 1.0
+    b = float(2.2)   # b will be 2.2
+    c = float("3.3") # c will be 3.3
+    
+    print (a)
+    print (b)
+    print (c)
+    </pre>
+    <p>This produce the following result &minus;</p>
+    <pre class="result notranslate">
+    1.0
+    2.2
+    3.3
+    </pre>
+    <h3>Conversion to string</h3>
+    <p>Following is an example to convert number, float and string into string data type:</p>
+    <pre class="demo-code notranslate language-python" data-lang="python3">
+    a = str(1)     # a will be "1" 
+    b = str(2.2)   # b will be "2.2"
+    c = str("3.3") # c will be "3.3"
+    
+    print (a)
+    print (b)
+    print (c)
+    </pre>
+    <p>This produce the following result &minus;</p>
+    <pre class="result notranslate">
+    1
+    2.2
+    3.3
+    </pre>
+    <h2>Data Type Conversion Functions</h2>
+    <p>There are several built-in functions to perform conversion from one data type to another. These functions return a new object representing the converted value.</p>
+    <table  class="table table-bordered">
+    <tr>
+    <th style="text-align:center;">Sr.No.</th>
+    <th style="text-align:center;">Function &amp; Description</th>
+    </tr>
+    <tr>
+    <td class="ts">1</td>
+    <td><p><b>int(x [,base])</b></p>
+    <p>Converts x to an integer. base specifies the base if x is a string.</p>
+    </td>
+    </tr>
+    <tr>
+    <td class="ts">2</td>
+    <td>
+    <p><b>long(x [,base] )</b></p>
+    <p>Converts x to a long integer. base specifies the base if x is a string.</p>
+    </td>
+    </tr>
+    <tr>
+    <td class="ts">3</td>
+    <td>
+    <p><b>float(x)</b></p>
+    <p>Converts x to a floating-point number.</p>
+    </td>
+    </tr>
+    <tr>
+    <td class="ts">4</td>
+    <td>
+    <p><b>complex(real [,imag])</b></p>
+    <p>Creates a complex number.</p>
+    </td>
+    </tr>
+    <tr>
+    <td class="ts">5</td>
+    <td>
+    <p><b>str(x)</b></p>
+    <p>Converts object x to a string representation.</p>
+    </td>
+    </tr>
+    <tr>
+    <td class="ts">6</td>
+    <td>
+    <p><b>repr(x)</b></p>
+    <p>Converts object x to an expression string.</p>
+    </td>
+    </tr>
+    <tr>
+    <td class="ts">7</td>
+    <td>
+    <p><b>eval(str)</b></p>
+    <p>Evaluates a string and returns an object.</p>
+    </td>
+    </tr>
+    <tr>
+    <td class="ts">8</td>
+    <td>
+    <p><b>tuple(s)</b></p>
+    <p>Converts s to a tuple.</p>
+    </td>
+    </tr>
+    <tr>
+    <td class="ts">9</td>
+    <td>
+    <p><b>list(s)</b></p>
+    <p>Converts s to a list.</p>
+    </td>
+    </tr>
+    <tr>
+    <td class="ts">10</td>
+    <td>
+    <p><b>set(s)</b></p>
+    <p>Converts s to a set.</p>
+    </td>
+    </tr>
+    <tr>
+    <td class="ts">11</td>
+    <td>
+    <p><b>dict(d)</b></p>
+    <p>Creates a dictionary. d must be a sequence of (key,value) tuples.</p>
+    </td>
+    </tr>
+    <tr>
+    <td class="ts">12</td>
+    <td>
+    <p><b>frozenset(s)</b></p>
+    <p>Converts s to a frozen set.</p>
+    </td>
+    </tr>
+    <tr>
+    <td class="ts">13</td>
+    <td>
+    <p><b>chr(x)</b></p>
+    <p>Converts an integer to a character.</p>
+    </td>
+    </tr>
+    <tr>
+    <td class="ts">14</td>
+    <td>
+    <p><b>unichr(x)</b></p>
+    <p>Converts an integer to a Unicode character.</p>
+    </td>
+    </tr>
+    <tr>
+    <td class="ts">15</td>
+    <td>
+    <p><b>ord(x)</b></p>
+    <p>Converts a single character to its integer value.</p>
+    </td>
+    </tr>
+    <tr>
+    <td class="ts">16</td>
+    <td>
+    <p><b>hex(x)</b></p>
+    <p>Converts an integer to a hexadecimal string.</p>
+    </td>
+    </tr>
+    <tr>
+    <td class="ts">17</td>
+    <td>
+    <p><b>oct(x)</b></p>
+    <p>Converts an integer to an octal string.</p>
+    </td>
+    </tr>
+    </table>
+
+
+    <form action="compiler.html">
+        
+      <button class="button-29" role="button-29">COMPILER</button>
+      </form>
+
+
+
+
+
+</body>
+</html>

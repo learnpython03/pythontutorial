@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="compilerbutton.css">
+   </head>
+<body>
+
+    <h1>Python - Decision Making</h1>
+
+<p>Decision making is anticipation of conditions occurring while execution of the program and specifying actions taken according to the conditions.</p>
+<p>Decision structures evaluate multiple expressions which produce TRUE or FALSE as outcome. You need to determine which action to take and which statements to execute if outcome is TRUE or FALSE otherwise.</p>
+>
+
+<p>Python programming language assumes any <b>non-zero</b> and <b>non-null</b> values as TRUE, and if it is either <b>zero</b> or <b>null</b>, then it is assumed as FALSE value.</p>
+<p>Python programming language provides following types of decision making statements. Click the following links to check their detail.</p>
+
+
+<h1>Python IF Statement</h1>
+
+<p>It is similar to that of other languages. The <b>if</b> statement contains a logical expression using which data is compared and a decision is made based on the result of the comparison.</p>
+<h2>Syntax</h2>
+<pre class="result notranslate">
+if expression:
+   statement(s)
+</pre>
+<p>If the boolean expression evaluates to TRUE, then the block of statement(s) inside the if statement is executed. If boolean expression evaluates to FALSE, then the first set of code after the end of the if statement(s) is executed.</p>
+<h2>Flow Diagram</h2>
+<img src="https://www.tutorialspoint.com/python/images/if_statement.jpg" alt="Python if statement" />
+<h3>Example</h3>
+
+<pre class="prettyprint notranslate">
+
+
+var1 = 100
+if var1:
+   print "1 - Got a true expression value"
+   print var1
+
+var2 = 0
+if var2:
+   print "2 - Got a true expression value"
+   print var2
+print "Good bye!"
+</pre>
+<p>When the above code is executed, it produces the following result &minus;</p>
+<pre class="result notranslate">
+1 - Got a true expression value
+100
+Good bye!
+</pre>
+
+<h1>Python IF...ELSE Statements</h1>
+
+<p>An <b>else</b> statement can be combined with an <b>if</b> statement. An <b>else</b> statement contains the block of code that executes if the conditional expression in the if statement resolves to 0 or a FALSE value.</p>
+<p>The <i>else</i> statement is an optional statement and there could be at most only one <b>else</b> statement following <b>if</b>.</p>
+<h3>Syntax</h3>
+<p>The syntax of the <i>if...else</i> statement is &minus;</p>
+<pre class="result notranslate">
+if expression:
+   statement(s)
+else:
+   statement(s)
+</pre>
+<h3>Flow Diagram</h3>
+<img src="https://www.tutorialspoint.com/python/images/if_else_statement.jpg" alt="Python if...else statement" />
+<h3>Example</h3>
+
+<pre class="prettyprint notranslate">
+
+
+var1 = 100
+if var1:
+   print "1 - Got a true expression value"
+   print var1
+else:
+   print "1 - Got a false expression value"
+   print var1
+
+var2 = 0
+if var2:
+   print "2 - Got a true expression value"
+   print var2
+else:
+   print "2 - Got a false expression value"
+   print var2
+
+print "Good bye!"
+</pre>
+<p>When the above code is executed, it produces the following result &minus;</p>
+<pre class="result notranslate">
+1 - Got a true expression value
+100
+2 - Got a false expression value
+0
+Good bye!
+</pre>
+<h2>The If...Elif...Else Statement</h2>
+<p>The <b>elif</b> statement allows you to check multiple expressions for TRUE and execute a block of code as soon as one of the conditions evaluates to TRUE.</p>
+<p>Similar to the <b>else</b>, the <b>elif</b> statement is optional. However, unlike <b>else</b>, for which there can be at most one statement, there can be an arbitrary number of <b>elif</b> statements following an <b>if</b>.</p>
+<h3>syntax</h3>
+<pre class="result notranslate">
+if expression1:
+   statement(s)
+elif expression2:
+   statement(s)
+elif expression3:
+   statement(s)
+else:
+   statement(s)
+</pre>
+<p>Core Python does not provide switch or case statements as in other languages, but we can use if..elif...statements to simulate switch case as follows &minus;</p>
+<h3>Example</h3>
+
+<pre class="prettyprint notranslate">
+
+
+var = 100
+if var == 200:
+   print "1 - Got a true expression value"
+   print var
+elif var == 150:
+   print "2 - Got a true expression value"
+   print var
+elif var == 100:
+   print "3 - Got a true expression value"
+   print var
+else:
+   print "4 - Got a false expression value"
+   print var
+
+print "Good bye!"
+</pre>
+<p>When the above code is executed, it produces the following result &minus;</p>
+<pre class="result notranslate">
+3 - Got a true expression value
+100
+Good bye!
+</pre>
+
+
+<form action="compiler.html">
+        
+   <button class="button-29" role="button-29">COMPILER</button>
+   </form>
+
+
+    
+</body>
+</html>
