@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="compilerbutton.css">
+</head>
+<body>
+    <h1>Python - Comments</h1> 
+        
+        
+
+<p>Python comments are programmer-readable explanation or annotations in the Python source code. They are added with the purpose of making the source code easier for humans to understand, and are ignored by Python interpreter. Comments enhance the readability of the code and help the programmers to understand the code very carefully. </p>
+<p>Just like most modern languages, Python supports single-line (or end-of-line) and multi-line (block) comments. Python comments are very much similar to the comments available in PHP, BASH and Perl Programming languages.</p>
+<p>There are three types of comments available in Python</p>
+<ul>
+<li>Single line Comments</li>
+<li>Multiline Comments</li>
+<li>Docstring Comments</li>
+</ul>
+
+<h2>Single Line Comments</h2>
+<p>A hash sign (#) that is not inside a string literal begins a comment. All characters after the # and up to the end of the physical line are part of the comment and the Python interpreter ignores them.</p>
+<h3>Example</h3>
+<p>Following is an example of a single line comment in Python:</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">
+# This is a single line comment in python
+
+print ("Hello, World!")
+</pre>
+<p>This produces the following result &minus;</p>
+<pre class="result notranslate">
+Hello, World!
+</pre>
+<p>You can type a comment on the same line after a statement or expression &minus;</p>
+<pre class="result notranslate">
+name = "Madisetti" # This is again comment
+</pre>
+<h2>Multi-Line Comments</h2>
+<p>Python does not provide a direct way to comment multiple line. You can comment multiple lines as follows &minus;</p>
+<pre class="result notranslate">
+# This is a comment.
+# This is a comment, too.
+# This is a comment, too.
+# I said that already.
+</pre>
+<p>Following triple-quoted string is also ignored by Python interpreter and can be used as a multiline comments:</p>
+<pre class="result notranslate">
+'''
+This is a multiline
+comment.
+'''
+</pre>
+<h3>Example</h3>
+<p>Following is the example to show the usage of multi-line comments:</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">
+'''
+This is a multiline
+comment.
+'''
+
+print ("Hello, World!")
+</pre>
+<p>This produces the following result &minus;</p>
+<pre class="result notranslate">
+Hello, World!
+</pre>
+<h2>Docstring Comments</h2>
+<p>Python docstrings provide a convenient way to provide a help documentation with Python modules, functions, classes, and methods. The <b>docstring</b> is then made available via the __doc__ attribute.</p>
+
+<pre class="demo-code notranslate language-python" data-lang="python3">
+def add(a, b):
+    """Function to add the value of a and b"""
+    return a+b
+
+print(add.__doc__)
+</pre>
+<p>This produces the following result &minus;</p>
+<pre class="result notranslate">
+Function to add the value of a and b
+</pre>
+
+
+<form action="compiler.html">
+        
+    <button class="button-29" role="button-29">COMPILER</button>
+    </form>
+
+
+
+    
+</body>
+</html>
